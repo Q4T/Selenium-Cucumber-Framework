@@ -1,0 +1,86 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 8934173900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "Practice makes perfect",
+        "description": "",
+        "id": "title-of-your-feature;practice-makes-perfect",
+        "after": [
+          {
+            "result": {
+              "duration": 655273600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 124292800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I know some Java",
+            "match": {
+              "location": "JavaPractice.IKnowJava()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 46190062000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I practice",
+            "match": {
+              "location": "JavaPractice.practice()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 24500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I get better",
+            "match": {
+              "location": "JavaPractice.GotTheJob()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Title of your feature",
+    "description": "I want to use this template for my feature file\r\nI can write anything in here\r\nAny amount of text is fine",
+    "id": "title-of-your-feature",
+    "keyword": "Feature",
+    "uri": "JavaPractice.feature",
+    "tags": [
+      {
+        "line": 2,
+        "name": "@java"
+      }
+    ]
+  }
+]

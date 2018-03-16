@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="55.903827">
+<testcase classname="Title of your feature" name="Practice makes perfect" time="55.903827">
+<system-out><![CDATA[Given I know some Java......................................................passed
+When I practice.............................................................passed
+Then I get better...........................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
