@@ -16,7 +16,7 @@ public class Cart extends PageBase {
 	private By TotalCost = By.cssSelector("td[id='total_product']");
 	private By cartCost1 = By.xpath("//tbody/tr[1]/td[4]/span/span");
 	private By cartCost2 = By.xpath("//tbody/tr[2]/td[4]/span/span");
-	private By cartProductSize1  = By.xpath("//tbody/tr[1]/td[2]//small[2]/a");
+	private By cartProductSize1  = By.xpath("//tbody/tr[1]/td[2]//small[2]/a");  // looks like harding of the product ?
 	private By cartProductSize2 =  By.xpath("//tbody/tr[2]/td[2]//small[2]/a");
 	private By proceedToCheckoutBttn = By.cssSelector("a[class='button btn btn-default standard-checkout button-medium']");
 	public static String  CART_PRODUCT_ONE_PRICE;
@@ -108,5 +108,20 @@ public class Cart extends PageBase {
 	
 	public String getGrandTotal() {
 		return CaptureProductDetails (grandTotal);
-	}	
+	}
+	
+	
+	public void sizeAsExpected(String size) {
+		Boolean sizeisCorrect = false;
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 }

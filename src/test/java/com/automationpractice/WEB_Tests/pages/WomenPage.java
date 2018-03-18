@@ -1,22 +1,14 @@
 package com.automationpractice.WEB_Tests.pages;
 
-import java.math.BigDecimal;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;   // this works fine. Don't understand the issue.
-import org.openqa.selenium.support.ui.Select;
-
-import com.automationpractice.WEB_Tests.utilities.Utilities;
 
 
 public class WomenPage extends PageBase{
 
-	private Select select;
-	private Utilities u;
-	private BigDecimal BD;
-	
 	By womenPageHeader  = By.cssSelector("h1[class='page-heading product-listing']");
 	By Blouse = By.cssSelector("a[class='quick-view'][http://automationpractice.com/index.php?id_product=2&controller=product']>span");
 	By Hover_Blouse = By.cssSelector("img[class='replace-2x img-responsive'][src='http://automationpractice.com/img/p/7/7-home_default.jpg']");
@@ -33,7 +25,7 @@ public class WomenPage extends PageBase{
 	}
 	
 	// Select striped dress for Quick View
-	public void selectClothingItem(By locator) {
+	private void selectClothingItem(By locator) {
 		By loc = locator;
 		//scroll down
 		JavascriptExecutor je = (JavascriptExecutor) driver;
@@ -57,9 +49,6 @@ public class WomenPage extends PageBase{
 	
 
 	public void waitForPageToLoad() {
-		if (u==null) {
-		Utilities u = new Utilities();
-		}
 		u.waitTillElementVisible(womenPageHeader,30);
 	}
 }

@@ -234,12 +234,8 @@ private Select select;
 	
 	
 	public void waitTillElementVisible(By locator, int duration){
-//		WebDriverWait wait = new WebDriverWait(driver, duration);
-//		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		WebDriverWait wait = new WebDriverWait(driver, duration);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		
-
 	}
 	
 	

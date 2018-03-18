@@ -8,21 +8,21 @@ import com.automationpractice.WEB_Tests.data.GlobalData;
 import com.automationpractice.WEB_Tests.pages.AddressesPage;
 import com.automationpractice.WEB_Tests.pages.Cart;
 import com.automationpractice.WEB_Tests.pages.CartInfo;
-import com.automationpractice.WEB_Tests.pages.LandingPage;
-import com.automationpractice.WEB_Tests.pages.LoginPage;
-import com.automationpractice.WEB_Tests.pages.MyAccountPage;
-import com.automationpractice.WEB_Tests.pages.OrderConfirmationPage;
-import com.automationpractice.WEB_Tests.pages.OrderHistoryPage;
+//import com.automationpractice.WEB_Tests.pages.LandingPage;
+//import com.automationpractice.WEB_Tests.pages.LoginPage;
+//import com.automationpractice.WEB_Tests.pages.MyAccountPage;
+//import com.automationpractice.WEB_Tests.pages.OrderConfirmationPage;
+//import com.automationpractice.WEB_Tests.pages.OrderHistoryPage;
 import com.automationpractice.WEB_Tests.pages.OrderSummaryPage;
 import com.automationpractice.WEB_Tests.pages.Pages;
 import com.automationpractice.WEB_Tests.pages.PaymentMethodPage;
-import com.automationpractice.WEB_Tests.pages.QuickViewPage;
+//import com.automationpractice.WEB_Tests.pages.QuickViewPage;
 import com.automationpractice.WEB_Tests.pages.ShippingPage;
 import com.automationpractice.WEB_Tests.pages.Toolbar;
-import com.automationpractice.WEB_Tests.pages.WomenPage;
+//import com.automationpractice.WEB_Tests.pages.WomenPage;
 import com.automationpractice.WEB_Tests.utilities.Utilities;
 
-import cucumber.api.Scenario;
+//import cucumber.api.Scenario;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -34,36 +34,36 @@ public class PurchaseItem{
 	private Utilities u;
 	private String dressSizeValue = Utilities.DressSize.TWO;  
 	
-	private LandingPage land;
-	private LoginPage login;
-	private MyAccountPage myAccount;
-	private WomenPage women;
-	private QuickViewPage  quick;
-	private CartInfo cartInfo;
+//	private LandingPage land;
+//	private LoginPage login;
+//	private MyAccountPage myAccount;
+//	private WomenPage women;
+//	private QuickViewPage  quick;
+//	private CartInfo cartInfo;
 	
-	private String cost1;
-	private String cost2;
+//	private String cost1;
+//	private String cost2;
 	private String totalProducts;	
 	
 	private ShippingPage shipping;
 	private AddressesPage addresses;
 	private PaymentMethodPage payment;
 	private OrderSummaryPage orderSummary;
-	private OrderConfirmationPage	orderConfirmation;	
-	private OrderHistoryPage orderHistory;
+//	private OrderConfirmationPage	orderConfirmation;	
+//	private OrderHistoryPage orderHistory;
 	private Cart cart;
 	
 	
-	private String totalPrice;
+//	private String totalPrice;
 	private Toolbar toolbar;
 	
 //	private String dressSizeValue = "2"; 
 	
 //	private String messageValue = "3";
-	private String printedDressDetails = "Color : Orange, Size : M";	//trim out for just size if have time
-	private String blouseDetails = "Color : Black, Size : S";			//trim out for just size if have time
+	private String printedDressDetails = "Color : Orange, Size : M";	//All detail of products needs moving into, where,  product classes?
+	private String blouseDetails = "Color : Black, Size : S";			//All detail of products needs moving into, where,  product classes?
 	static String PURCHASE_DATE;
-	private Scenario scenario;
+
 	
 
 	
@@ -115,6 +115,13 @@ public class PurchaseItem{
 		
 		@Then ("^the sizes and cost calculations are correct$")
 		public void the_sizes_and_cost_calculations_are_correct() throws Throwable {
+			
+			
+			
+//			*********8  putting functionality into the cart class to encapsulate it and hide it from the step definition file. ***********
+			
+			
+			
 //			 Boolean figuresAreCorrect = false;
 			 Boolean Prod1SizeIsCorrect = false;
 			 Boolean prod2SizeIsCorrect = false;
