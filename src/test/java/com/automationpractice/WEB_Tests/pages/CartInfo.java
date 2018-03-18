@@ -2,11 +2,9 @@ package com.automationpractice.WEB_Tests.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import com.automationpractice.WEB_Tests.utilities.Utilities;
 
 public class CartInfo extends PageBase {
 
-	private Utilities u;
 	private By itemCost = By.cssSelector("span[id='layer_cart_product_price']");
 	private By continueShoppingButton =  By.cssSelector("span[class='continue btn btn-default button exclusive-medium']");
 	private By popUp  = By.cssSelector("div[class='layer_cart_cart col-xs-12 col-md-6']");
@@ -14,11 +12,6 @@ public class CartInfo extends PageBase {
 	public static String CART_INFO_COST_1;
 	public static String CART_INFO_COST_2;
 	
-	public CartInfo () { 
-		if(u==null) {
-			u=new Utilities();
-		}
-	}
 	
 	// wait for this pop-up page to load
 	public void WaitForCartToLoad() {

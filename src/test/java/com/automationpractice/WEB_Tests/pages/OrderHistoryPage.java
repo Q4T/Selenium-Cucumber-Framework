@@ -5,9 +5,6 @@ import java.util.List;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-
-import com.automationpractice.WEB_Tests.utilities.Utilities;
 
 
 public class OrderHistoryPage extends PageBase {
@@ -17,15 +14,7 @@ public class OrderHistoryPage extends PageBase {
 	private By messageTextBox = By.xpath("//textarea");
 	private By SuccessMsg = By.cssSelector("p[class ='alert alert-success']");
 	private By messagesTable = By.xpath("//div[@id='block-order-detail']/div[5]/table/tbody");      // ***this needs changing as selenium things this is the orders table and runs through that.
-	private Utilities u;
-	private Select select;	
 
-	public OrderHistoryPage (){
-		
-		 if(u==null) {
-			 u = new Utilities();
-		 }
-	}
 	
 	public void clickSubmitButton() {
 		u.waitTillElementVisible(Submitbuttom, 30);

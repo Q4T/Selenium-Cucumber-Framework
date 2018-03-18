@@ -4,17 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.automationpractice.WEB_Tests.data.GlobalData;
-import com.automationpractice.WEB_Tests.utilities.Utilities;
+
 
 	
 public class LoginPage extends PageBase{
 
 	private  String emailAddress = GlobalData.EMAIL;
 	private  String password = GlobalData.PASSWORD;
-	private  String url = GlobalData.URL;  
-	private  Utilities u;
 	private  By emailTxtBox = By.cssSelector("input[id='email']");
 	private  By passTextBox = By.cssSelector("input[id='passwd']");
 	private  By LoginBttn = By.cssSelector("button[id='SubmitLogin']");
@@ -44,6 +41,7 @@ public class LoginPage extends PageBase{
 	}
 	
 	public void WaitForLoginPageToLoad() {
+		@SuppressWarnings("unused")
 		WebElement wait = new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(emailTxtBox));		
 		}
 	

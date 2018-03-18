@@ -1,0 +1,15 @@
+youtube https://www.youtube.com/watch?v=DO8KVe00kcU&t=694s
+Remove declaration of Utilities in a page classes
+complete simplifying the step definitions to be super simple
+make a Pages class that calls all the pages allowing pages.Login etc so user can see all pages available
+Remove complexity by making functions from users perspective on pages.
+Remove all variables from tests use constants instead.
+Never allow tests to manage their own state
+Add Assertions for every action - see https://www.youtube.com/watch?v=DO8KVe00kcU&t=694s
+remove long names from packages woof.
+
+
+Looks like I need to or can have for 1 user story:
+ 1 step definition
+ 1 feature file -contains multiple scenarios to cover all the acceptance criteria inn the story
+ 1 test runner / user story or feature?

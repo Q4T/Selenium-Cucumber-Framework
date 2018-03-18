@@ -18,7 +18,7 @@ plugin = {"html:target/cucumber_html_report",
 
 public class Login {
 
-	public void SmokeTests() {
+	public Login() {
 		
 	}	
 }

@@ -47,5 +47,34 @@ public class Pages {
 			Cart cart = new Cart();
 			return cart;
 		}
+		
+		public static OrderConfirmationPage OrderConfirmationPage() {
+			OrderConfirmationPage o = new OrderConfirmationPage();
+			return o;	
+		}
+		
+		public static OrderHistoryPage OrderHistoryPage() {
+			OrderHistoryPage oh =  new OrderHistoryPage();
+			return oh;
+		}
+		
+		public static OrderSummaryPage OrderSummaryPage() {
+			OrderSummaryPage os = new OrderSummaryPage();
+				return os;	
+		}
+		
+		public static PaymentMethodPage PaymentMethodPage() {
+			PaymentMethodPage pm = new PaymentMethodPage();
+			return pm;
+		}
+		
+		public static ShippingPage ShippingPage() {
+			ShippingPage sp = new ShippingPage();
+			return sp;
+		}
+		
+		
+		
+		
 	}
 	

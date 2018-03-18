@@ -1,8 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="55.903827">
-<testcase classname="Title of your feature" name="Practice makes perfect" time="55.903827">
-<system-out><![CDATA[Given I know some Java......................................................passed
-When I practice.............................................................passed
-Then I get better...........................................................passed
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="60.858837">
+<testcase classname="User can purchase items" name="User purchases 2 items" time="30.29054">
+<system-out><![CDATA[Given the user user is logged into the site.................................passed
+When the user changes the size of an item...................................passed
+And adds it to their basket.................................................passed
+And adds another item to the basket.........................................passed
+Then the sizes and cost calculations are correct............................passed
+And the user can purchase the items.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User can purchase items" name="user can add a message to a purchased item" time="30.568297">
+<system-out><![CDATA[Given there is a product in the order hisory................................passed
+When the user adds a message to a particular product ordered................passed
+Then the message will appear under messages.................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

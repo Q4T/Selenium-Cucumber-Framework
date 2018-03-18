@@ -3,10 +3,9 @@ package com.automationpractice.WEB_Tests.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import com.automationpractice.WEB_Tests.utilities.Utilities;
 
 public class Cart extends PageBase {
-	Utilities u;
+
 	String cellContents;
 
 	private By totalProducts = By.xpath("//tfoot/tr/td[3]");										
@@ -23,12 +22,6 @@ public class Cart extends PageBase {
 	public static String  CART_PRODUCT_ONE_PRICE;
 	public static String  CART_PRODUCT_TWO_PRICE;
 
-	public Cart () {
-		if(u==null) {
-			u = new Utilities();
-		}
-	}
-	
 	public void clickProceedToCheckout() {
 		JavascriptExecutor je = (JavascriptExecutor) driver;
 		je.executeScript("javascript:window.scrollBy(0,600)");

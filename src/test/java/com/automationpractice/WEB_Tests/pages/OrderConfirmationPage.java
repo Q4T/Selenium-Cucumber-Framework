@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 public class OrderConfirmationPage extends PageBase {
 
 	private By backToOrders   = By.cssSelector("a[class='button-exclusive btn btn-default']"); 
-	private By item1Date = By.cssSelector("//table/tbody/tr/td[2]");   // to be used to check the correct date of items
+//	private By item1Date = By.cssSelector("//table/tbody/tr/td[2]");   // to be used to check the correct date of items
 	
 	public OrderConfirmationPage() {
 		

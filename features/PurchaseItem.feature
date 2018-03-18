@@ -14,7 +14,7 @@ And adds another item to the basket
 Then the sizes and cost calculations are correct
 And the user can purchase the items
 
-
+@smoke
 Scenario: user can add a message to a purchased item
 Given there is a product in the order hisory
 When the user adds a message to a particular product ordered

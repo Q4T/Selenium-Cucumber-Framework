@@ -23,7 +23,7 @@ import com.automationpractice.WEB_Tests.data.GlobalData;
 
 import com.automationpractice.WEB_Tests.pages.*;
 
-public  class Utilities extends PageBase{
+public class Utilities extends PageBase{
 	
 
 private LandingPage la;
@@ -31,8 +31,8 @@ private LoginPage log;
 private CartInfo cartInformation;
 private MyAccountPage theAccountPage;
 private Cart thecart;
-private AddressesPage addPage;
-private ShippingPage shipping;
+//private AddressesPage addPage;
+//private ShippingPage shipping;
 private PaymentMethodPage pay;
 private OrderSummaryPage orderSum;
 private OrderConfirmationPage orderConfirmation;
@@ -40,31 +40,32 @@ private Toolbar tool;
 private OrderHistoryPage orderHistory;
 private Select select;
 
-	
-	public Utilities() {
-	
-	}
+
 	
 	public static void TestSetUp( ) {
 		String url = GlobalData.URL;
-		PageBase.getDriver();
+		PageBase.initialiseUtility();
+		PageBase.initialiseDriver();
 		driver.get(url);
 		driver.manage().window().maximize();    
 		System.out.println("Test Starting *********");
 	}
+	
 	
 	public void scrollToBottomofPage() {
 		JavascriptExecutor je = (JavascriptExecutor) driver;
 		je.executeScript("javascript:window.scrollTo(0,document.body.scrollHeight)");
 	}
 	
-	public WebDriver getDriver(WebDriver drive) {
-		driver = drive;
-		if (driver==null) {
-			driver = DriverFactory.getDriver();
-		}
-		return driver;
-	}
+	
+//	public WebDriver getDriver(WebDriver drive) {
+//		driver = drive;
+//		if (driver==null) {
+//			driver = DriverFactory.getDriver();
+//		}
+//		return driver;
+//	}
+	
 	
 	public OrderHistoryPage getOrderHistoryPage() {
 		if (orderHistory==null) {
@@ -73,6 +74,7 @@ private Select select;
 		return orderHistory;
 	}
 	
+	
 	public OrderConfirmationPage getOderConfirmationPage(OrderConfirmationPage confirm) {
 		orderConfirmation = confirm;
 		if(orderConfirmation==null) {
@@ -80,6 +82,7 @@ private Select select;
 		}
 		return orderConfirmation;
 	}
+	
 	
 	public OrderSummaryPage getOrderSummaryPage(OrderSummaryPage order) {
 		orderSum = order;
@@ -97,6 +100,7 @@ private Select select;
 		}
 		return la;
 	}
+	
 	
 	public LoginPage getLoginPage(LoginPage login) {
 		log = login;
@@ -119,7 +123,8 @@ private Select select;
 		}
 		return shipping;
 	}
-				
+	
+	
 	public CartInfo getCartInfo(CartInfo cartInfo) {
 		cartInformation= cartInfo;
 		if(cartInformation==null) {
@@ -128,6 +133,7 @@ private Select select;
 		return cartInformation;
 	}
 	
+	
 	public MyAccountPage getMyAccount (MyAccountPage account) {
 		theAccountPage = account;
 		if(theAccountPage==null) {
@@ -135,6 +141,7 @@ private Select select;
 		}
 		return theAccountPage;
 	}
+	
 	
 	public Cart getCart(Cart cart) {
 		thecart = cart;
@@ -168,6 +175,7 @@ private Select select;
 		return pay;
 	}
 	
+	
 	public Toolbar getToolbar(Toolbar toolbar) {
 		tool = toolbar;
 		if(tool==null) {
@@ -190,9 +198,8 @@ private Select select;
 		
 	
 	public void embedScreenshot(Scenario scenario) throws Exception {
-//	public void embedScreenshot(String status) throws Exception {
+
 	    if (scenario.isFailed()) {
-//	    if (status.equalsIgnoreCase(false)) {
 	        try {
 	            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 	            String testName = scenario.getName();
@@ -201,21 +208,21 @@ private Select select;
 	        } catch (WebDriverException wde) {
 	            System.err.println(wde.getMessage());
 	        } catch (ClassCastException cce) {
-	            cce.printStackTrace();}
+	        	System.err.println(cce.getMessage());
+//	            cce.printStackTrace();
+	        	}
 	        }
 	    }
 	
 		
 	public static void testTearDown(){
-//		Scenario theScenario = scenario;
-//		embedScreenshot(theScenario);
 		driver.close();
 		driver.quit();
 		System.out.println("Test Ending *********");
 	}
 	
+	
 	public void suiteTearDown(WebDriver driver) {
-//		destroy the driver object
 		driver.quit();
 		driver.close();
 		System.out.println("End of Test Suite**********");
@@ -225,17 +232,23 @@ private Select select;
 			driver.get(GlobalData.URL);
 	}
 	
+	
 	public void waitTillElementVisible(By locator, int duration){
-		By loc = locator;
+//		WebDriverWait wait = new WebDriverWait(driver, duration);
+//		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		WebDriverWait wait = new WebDriverWait(driver, duration);
-		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(loc));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		
+
 	}
-			
+	
+	
 	public String removeDollarSign(String Value) {
 		String val = Value;
 		val = val.replace("$","");
 		return val;
 	}
+	
 	
 	// accepts 2 $amounts as strings and returns a dollar amount as a bigDecimal
 	public BigDecimal sumTwoDollarAmounts(String item1, String item2) {
@@ -265,7 +278,8 @@ private Select select;
 //		je.executeScript("javascript:window.scrollTo(0,document.body.scrollTop)");
 //		je.executeScript("javascript:window.scrollTo(0,document.body.scrollHeight)");
 	}
-			
+		
+	
 	public String getDate() {
 		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
 		Date date = new Date();
@@ -273,6 +287,7 @@ private Select select;
 		System.out.println("Current date is: --- "+justDate);	
 		return justDate;
 	} 
+	
 	
 	public boolean retryingFindSelect(By locator, String value) {
         boolean result = false;
@@ -292,7 +307,8 @@ private Select select;
         }
         return result;
 	}
-		
+	
+	
 	public boolean retryingFindClick(By by) {
         boolean result = false;
         int attempts = 0;
@@ -308,15 +324,13 @@ private Select select;
         return result;
 	}
 	
-	
-	
+	// change this so that we have a method for each size to call that has the size as part of implementation
 	public class DressSize {
 		
 		public static final String ONE = "1";
 		public static final String TWO = "2";
 		public static final String THREE = "3";
 
-	
 }
 	
 	

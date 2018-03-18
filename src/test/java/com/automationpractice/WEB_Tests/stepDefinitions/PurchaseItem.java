@@ -32,8 +32,6 @@ import cucumber.api.java.en.When;
 public class PurchaseItem{
 
 	private Utilities u;
-//	private String url = GlobalData.URL;
-//	private String dressSizeValue = DressSize.TWO;
 	private String dressSizeValue = Utilities.DressSize.TWO;  
 	
 	private LandingPage land;

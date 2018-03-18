@@ -10,9 +10,15 @@ public class PageBase {
 
 	public static WebDriver driver;
 	public static Utilities u;
-
-	public static void getDriver() {
+	
+	public static void initialiseDriver() {
 		driver = DriverFactory.getDriver();
 		}	
+	
+	
+	 public static void initialiseUtility() {
+		 u = new Utilities();
+	 }
+	 
 	
 }
