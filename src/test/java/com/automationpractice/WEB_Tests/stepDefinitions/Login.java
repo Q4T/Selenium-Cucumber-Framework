@@ -15,12 +15,12 @@ public class Login {
 	 
 	 @When ("^user logs in$")
 	 public void UserLogsIn () {
-		 Pages.Login().validLogin();
+		 Pages.login().validLogin();
 	 }
 	 
 	 @Then("^user is taken to the landing page$")
 	 public void UserIsOnLandingPage() {
-		boolean logOutIsAvailable =  Pages.MyAccountPage().logoutPresent();
+		boolean logOutIsAvailable =  Pages.myAccountPage().logoutPresent();
 		Assert.assertTrue(logOutIsAvailable); 
 	 }
 	

@@ -9,8 +9,18 @@ public class CartInfo extends PageBase {
 	private By continueShoppingButton =  By.cssSelector("span[class='continue btn btn-default button exclusive-medium']");
 	private By popUp  = By.cssSelector("div[class='layer_cart_cart col-xs-12 col-md-6']");
 	private By proceedToCheckoutBttn = By.cssSelector("a[class='btn btn-default button button-medium']");
-	public static String CART_INFO_COST_1;
-	public static String CART_INFO_COST_2;
+//	public static String CART_INFO_COST_1;
+//	public static String CART_INFO_COST_2;
+	public static String itemOneInfoCost;
+	public static String itemTwoInfoCost;
+	
+	public void CheckTotalCostisCorrect() {
+		//new
+		
+	}
+	
+	
+
 	
 	
 	// wait for this pop-up page to load
@@ -37,13 +47,14 @@ public class CartInfo extends PageBase {
 	
 	// gets a cost and assigns to global var ITEM_COST_1 for use in tests.
 	public void getItem1Cost() {
-		CART_INFO_COST_1 = getPrice();
+		itemOneInfoCost = getPrice();
 	}
 	
 	// gets a cost and assigns to global var ITEM_COST_2 for use in tests.
 		public void getItem2Cost() {
-			CART_INFO_COST_2 = getPrice();
+			itemTwoInfoCost = getPrice();
 		}
+	
 	
 	
 	public void waitForProceedBttn() {

@@ -18,9 +18,10 @@ public class MyAccountPage extends PageBase{
 	}
 	
 	//click Women Button
-	public void ClickWomenButton() {
+	public  void ClickWomenButton() {
 		driver.findElement(womenButton).click();
 	}	
+	
 	
 	public void ClickOrderHistoryBttn() {
 		driver.findElement(orderHistory).click();
@@ -32,6 +33,11 @@ public class MyAccountPage extends PageBase{
 			return true;
 		}
 		return false;
+	}
+	
+	
+	public static void justaTest() {
+		System.out.println("nothing");
 	}
 	
 }

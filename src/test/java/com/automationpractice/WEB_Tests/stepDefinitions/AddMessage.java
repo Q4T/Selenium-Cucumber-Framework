@@ -41,7 +41,7 @@ public class AddMessage {
 		login.validLogin();
 		account = u.getMyAccount(account);
 		account.ClickOrderHistoryBttn();
-		purchaseDate = PurchaseItem.PURCHASE_DATE;
+		purchaseDate = PurchaseItem.purchaseDate;       // must be better way to do this? 
 		orders = u.getOrderHistoryPage();
 		orders.selectProduct(purchaseDate);
 	}

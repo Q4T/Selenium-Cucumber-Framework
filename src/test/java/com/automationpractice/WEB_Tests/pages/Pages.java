@@ -1,26 +1,59 @@
 package com.automationpractice.WEB_Tests.pages;
 
+// if we need the pages to be non-static we can just initialise the Pages page in the @beforeTest or setup hook.
 public class Pages {
 
+	public static MyAccountPage myAccountPage;
+	public static LoginPage loginPage;
+	public static AddressesPage addressPage;
+	public static LandingPage landingPage;
+//	public static rest need doing
+//	public static
+//	public static
+//	public static
+//	public static
+//	public static
+//	public static
+//	public static
+//	public static
+//	public static
+//	public static
+//	public static
+//	public static
+//	public static
 
-		public static LoginPage Login() {
-			LoginPage login = new LoginPage();
-			return 	login;
+	
+	
+		public static LoginPage login() {
+			if(loginPage==null) {
+			LoginPage lo = new LoginPage();
+			loginPage = lo;
+			}
+			return 	loginPage;
 		}
 		
-		public static AddressesPage Address() {
+		public static AddressesPage address() {
+			if(addressPage==null) {
 			 AddressesPage add = new AddressesPage();
-			 return add;	
+			 addressPage = add;
+			}
+			 return addressPage;	
 		}
 		
 		public static LandingPage Landing() {
-			LandingPage land = new LandingPage();
-			return land;
+			if(landingPage==null) {
+				LandingPage land = new LandingPage();
+				landingPage = land;
+			}
+			return landingPage;
 		}
 		
-		public static MyAccountPage MyAccountPage() {
+		public static MyAccountPage myAccountPage() {
+			if (myAccountPage == null) {
 			MyAccountPage account = new MyAccountPage();
-			return account;		
+			myAccountPage = account;
+			}
+			return myAccountPage;		
 		}
 		
 		public static Toolbar ToolBarPage() {
